@@ -16,16 +16,16 @@ kibana:
     - "80:80"
 logspout:
   environment:
-    DEBUG: true
+    DEBUG: "true"
   volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+    - //var//run//docker.sock://var//run/docker.sock
   command: syslog://localhost:5000
 cadvisor:
   image: google/cadvisor:latest
   volumes:
-    - /:/rootfs:ro
-    - /var/run:/var/run:rw
-    - /sys:/sys:ro
-    - /var/lib/docker/:/var/lib/docker:ro
+    - //://rootfs:ro
+    - //var//run://var//run:rw
+    - //sys://sys:ro
+    - //var//lib//docker//://var//lib//docker:ro
   ports:
     - "8080:8080"
